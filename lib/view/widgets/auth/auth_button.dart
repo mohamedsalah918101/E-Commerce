@@ -16,7 +16,7 @@ class AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Get.isDarkMode ? mainColor : pinkColor,
+          backgroundColor: Get.isDarkMode ? pinkColor : mainColor,
           minimumSize: Size(360, 50),
         ),
         onPressed: onPressed,

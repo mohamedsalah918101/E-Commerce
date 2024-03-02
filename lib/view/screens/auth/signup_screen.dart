@@ -52,7 +52,7 @@ class SignUpScreen extends StatelessWidget {
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
                             text: "SIGN",
-                            color: Get.isDarkMode ? mainColor : pinkColor,
+                            color: Get.isDarkMode ? pinkColor : mainColor ,
                           ),
                           SizedBox(
                             width: 3,
@@ -82,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
                             return null;
                           }
                         },
-                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/user.png'): Icon(Icons.person, color: pinkColor, size: 30,),
+                        prefixIcon: Get.isDarkMode ? Icon(Icons.person, color: pinkColor, size: 30,) : Image.asset('assets/images/user.png') ,
                         suffixIcon: Text(''),
                         hintText: 'User Name',
                       ),
@@ -103,7 +103,7 @@ class SignUpScreen extends StatelessWidget {
                             return null;
                           }
                         },
-                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : Icon(Icons.email, color: pinkColor, size: 30,),
+                        prefixIcon: Get.isDarkMode ? Icon(Icons.email, color: pinkColor, size: 30,) : Image.asset('assets/images/email.png')  ,
                         suffixIcon: Text(''),
                         hintText: 'Email',
                       ),
@@ -126,12 +126,12 @@ class SignUpScreen extends StatelessWidget {
                                 return null;
                               }
                             },
-                            prefixIcon: Get.isDarkMode ? Image.asset('assets/images/lock.png') : Icon(Icons.lock, color: pinkColor, size: 30,),
+                            prefixIcon: Get.isDarkMode ? Icon(Icons.lock, color: pinkColor, size: 30,) : Image.asset('assets/images/lock.png')  ,
                             suffixIcon: IconButton(
                               onPressed: (){
                                 controller.visibility();
                               },
-                              icon: controller.isVisibility ? Icon(Icons.visibility_off, color: Colors.black,) : Icon(Icons.visibility, color: Colors.black,),
+                              icon: controller.isVisibility ? Icon(Icons.visibility_off, color:Get.isDarkMode ? Colors.black : Colors.white,) : Icon(Icons.visibility, color: Get.isDarkMode ? Colors.black : Colors.white,),
                             ),
                             hintText: 'Password',
                           );

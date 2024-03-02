@@ -22,7 +22,7 @@ class ForgetPasswordScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Get.isDarkMode ? darkGreyColor : Colors.white ,
         title: Text('Forget Password',
-        style: TextStyle(color: Get.isDarkMode ? mainColor : pinkColor),
+        style: TextStyle(color: Get.isDarkMode ? pinkColor : mainColor ),
         ),
         leading: IconButton(
           onPressed: (){
@@ -45,14 +45,14 @@ class ForgetPasswordScreen extends StatelessWidget {
                       Get.back();
                     },
                     icon: Icon(Icons.close_rounded,
-                    color: Colors.white,),
+                    color:Get.isDarkMode ? Colors.white : Colors.black,),
                   ),
                 ),
                 SizedBox(height: 20,),
                 Text(
                     "if you want to recover your account, then please provide your email below..",
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Get.isDarkMode ? Colors.black : Colors.white),
+                  style: TextStyle(color: Get.isDarkMode ? Colors.white : Colors.black ),
                 ),
                 SizedBox(height: 50,),
                 Image.asset('assets/images/forgetpass copy.png',
@@ -69,7 +69,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                       return null;
                     }
                   },
-                  prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : Icon(Icons.email, color: pinkColor, size: 30,),
+                  prefixIcon: Get.isDarkMode ? Icon(Icons.email, color: pinkColor, size: 30) : Image.asset('assets/images/email.png') ,
                   suffixIcon: Text(''),
                   hintText: 'Email',
                 ),

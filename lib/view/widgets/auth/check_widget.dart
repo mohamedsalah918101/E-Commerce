@@ -27,7 +27,7 @@ class CheckWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: controller.isCheckBox
-                    ? Get.isDarkMode ? Image.asset('assets/images/check.png') : Icon(Icons.done, color: pinkColor,)
+                    ? Get.isDarkMode ? Icon(Icons.done, color: pinkColor,) : Image.asset('assets/images/check.png')
                     : Container(),
               ),
             ),

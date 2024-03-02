@@ -20,7 +20,7 @@ class ContainerUnder extends StatelessWidget {
         width: double.infinity,
         height: 100,
         decoration: BoxDecoration(
-            color: Get.isDarkMode ? mainColor : pinkColor,
+            color: Get.isDarkMode ? pinkColor : mainColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
