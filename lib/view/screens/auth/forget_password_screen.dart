@@ -16,7 +16,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.onSurface,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
@@ -35,7 +35,7 @@ class ForgetPasswordScreen extends StatelessWidget {
         key: formKey,
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20,),
+            padding: const EdgeInsets.symmetric(horizontal: 20,),
             child: Column(
               children: [
                 Align(
@@ -44,21 +44,21 @@ class ForgetPasswordScreen extends StatelessWidget {
                     onPressed: (){
                       Get.back();
                     },
-                    icon: Icon(Icons.close_rounded,
+                    icon: const Icon(Icons.close_rounded,
                     color: Colors.white,),
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text(
                     "if you want to recover your account, then please provide your email below..",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Get.isDarkMode ? Colors.black : Colors.white),
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Image.asset('assets/images/forgetpass copy.png',
                 width: 250,
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 AuthTextFormField(
                   controller: emailController,
                   obscureText: false,
@@ -69,11 +69,11 @@ class ForgetPasswordScreen extends StatelessWidget {
                       return null;
                     }
                   },
-                  prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : Icon(Icons.email, color: pinkColor, size: 30,),
-                  suffixIcon: Text(''),
+                  prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : const Icon(Icons.email, color: pinkColor, size: 30,),
+                  suffixIcon: const Text(''),
                   hintText: 'Email',
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 GetBuilder<AuthController>(
                     builder: (_){
                       return AuthButton(onPressed: (){

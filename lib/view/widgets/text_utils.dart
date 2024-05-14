@@ -8,7 +8,7 @@ class TextUtils extends StatelessWidget {
   final Color color;
   final TextDecoration? underline;
 
-  TextUtils(
+  const TextUtils(
       {required this.fontSize,
       required this.fontWeight,
       required this.text,

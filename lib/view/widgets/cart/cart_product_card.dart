@@ -18,7 +18,7 @@ class CartProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 20, right: 20, top: 5),
+      margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
       height: 130,
       width: 100,
       decoration: BoxDecoration(
@@ -33,7 +33,7 @@ class CartProductCard extends StatelessWidget {
           Container(
             height: 120,
             width: 100,
-            margin: EdgeInsets.only(left: 15),
+            margin: const EdgeInsets.only(left: 15),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
@@ -43,7 +43,7 @@ class CartProductCard extends StatelessWidget {
               )
             ),
           ),
-          SizedBox(width: 20,),
+          const SizedBox(width: 20,),
           Expanded(
             flex: 15,
             child: Column(
@@ -58,7 +58,7 @@ class CartProductCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       overflow: TextOverflow.ellipsis),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(

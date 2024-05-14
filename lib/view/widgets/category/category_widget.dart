@@ -1,6 +1,5 @@
 import 'package:e_commerce/logic/controller/category_controller.dart';
 import 'package:e_commerce/utils/theme.dart';
-import 'package:e_commerce/view/widgets/home/card_items.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -46,7 +45,7 @@ class CategoryWidget extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(left: 20, bottom: 10,),
+                      padding: const EdgeInsets.only(left: 20, bottom: 10,),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -64,7 +63,7 @@ class CategoryWidget extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index){
-                return SizedBox(height: 20,);
+                return const SizedBox(height: 20,);
               },
               itemCount: controller.categoryNameList.length,
             ));

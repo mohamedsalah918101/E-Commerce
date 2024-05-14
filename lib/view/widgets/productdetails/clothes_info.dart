@@ -21,7 +21,7 @@ class ClothesInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -41,7 +41,7 @@ class ClothesInfo extends StatelessWidget {
                 ),
               ),
               Obx(() => Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Get.isDarkMode ? Colors.white.withOpacity(0.9) : Colors.grey.withOpacity(0.4),
                     shape: BoxShape.circle,
@@ -50,11 +50,11 @@ class ClothesInfo extends StatelessWidget {
                     onTap: (){
                       controller.manageFavorites(productId);
                     },
-                    child: controller.isFavorites(productId) ? Icon(
+                    child: controller.isFavorites(productId) ? const Icon(
                       Icons.favorite,
                       color: Colors.red,
                       size: 20,
-                    ) : Icon(
+                    ) : const Icon(
                       Icons.favorite_outline,
                       color: Colors.black,
                       size: 20,
@@ -69,10 +69,10 @@ class ClothesInfo extends StatelessWidget {
               TextUtils(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
-                  text: "${rate}",
+                  text: "$rate",
                   color: Get.isDarkMode? Colors.white : Colors.black,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               RatingBar.builder(
@@ -82,7 +82,7 @@ class ClothesInfo extends StatelessWidget {
                   allowHalfRating: true,
                   itemCount: 5,
                   itemSize: 20,
-                  itemBuilder: (context, _) => Icon(
+                  itemBuilder: (context, _) => const Icon(
                     Icons.star,
                     color: Colors.amber,
                     size: 20,
@@ -95,7 +95,7 @@ class ClothesInfo extends StatelessWidget {
 
             ],
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           ReadMoreText(
             description,
             trimLines: 3,

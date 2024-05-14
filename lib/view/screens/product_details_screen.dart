@@ -10,7 +10,7 @@ import '../widgets/productdetails/size_list.dart';
 class ProductDetailsScreen extends StatelessWidget {
   final ProductModels productModels;
 
-  ProductDetailsScreen({
+  const ProductDetailsScreen({
   super.key,
   required this.productModels,
 });
@@ -19,7 +19,7 @@ class ProductDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: context.theme.backgroundColor,
+        backgroundColor: context.theme.colorScheme.onSurface,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +33,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 rate: productModels.rating.rate,
                 description: productModels.description,
               ),
-              SizeList(),
+              const SizeList(),
               AddCart(
                 price: productModels.price,
                 productModels: productModels,

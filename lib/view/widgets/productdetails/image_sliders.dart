@@ -42,7 +42,7 @@ class _ImageSlidersState extends State<ImageSliders> {
           carouselController: carouselController,
           itemBuilder: (context, index, realIndex) {
             return Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
@@ -59,7 +59,7 @@ class _ImageSlidersState extends State<ImageSliders> {
               autoPlay: true,
               enlargeCenterPage: true,
               enableInfiniteScroll: false,
-              autoPlayInterval: Duration(seconds: 2),
+              autoPlayInterval: const Duration(seconds: 2),
               viewportFraction: 1,
               onPageChanged: (index, reason) {
                 setState(() {
@@ -85,7 +85,7 @@ class _ImageSlidersState extends State<ImageSliders> {
             child: Container(
               height: 180,
               width: 50,
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(30),
@@ -104,14 +104,14 @@ class _ImageSlidersState extends State<ImageSliders> {
                     );
                   },
                   separatorBuilder: (context, index) {
-                    return SizedBox(
+                    return const SizedBox(
                       height: 3,
                     );
                   },
                   itemCount: colorSelected.length),
             )),
         Container(
-          padding: EdgeInsets.only(top: 20, left: 25, right: 25),
+          padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -120,14 +120,14 @@ class _ImageSlidersState extends State<ImageSliders> {
                   Get.back();
                 },
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                       color: Get.isDarkMode
                           ? pinkColor.withOpacity(0.8)
                           : mainColor.withOpacity(0.8),
                       shape: BoxShape.circle),
                   child: Padding(
-                    padding: EdgeInsets.only(left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Icon(
                       Icons.arrow_back_ios,
                       color: Get.isDarkMode ? Colors.black : Colors.white,
@@ -139,20 +139,20 @@ class _ImageSlidersState extends State<ImageSliders> {
               Obx(() {
                 return badges.Badge(
                   position: badges.BadgePosition.topEnd(top: -10, end: -10),
-                  badgeAnimation: badges.BadgeAnimation.slide(
+                  badgeAnimation: const badges.BadgeAnimation.slide(
                     disappearanceFadeAnimationDuration:
                         Duration(milliseconds: 300),
                   ),
                   badgeContent: Text(
                     cartController.quantity().toString(),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                   child: InkWell(
                     onTap: () {
                       Get.toNamed(Routes.cartScreen);
                     },
                     child: Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                           color: Get.isDarkMode
                               ? pinkColor.withOpacity(0.8)

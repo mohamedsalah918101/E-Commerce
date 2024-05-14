@@ -17,7 +17,7 @@ class EmptyCart extends StatelessWidget {
             size: 150,
             color: Get.isDarkMode ? Colors.white : Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           RichText(
@@ -35,7 +35,7 @@ class EmptyCart extends StatelessWidget {
                     fontSize: 30,
                     fontWeight: FontWeight.bold)),
           ])),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -45,7 +45,7 @@ class EmptyCart extends StatelessWidget {
                 fontSize: 15,
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 50,),
+          const SizedBox(height: 50,),
           SizedBox(
             height: 50,
             child: ElevatedButton(
@@ -59,7 +59,7 @@ class EmptyCart extends StatelessWidget {
                   elevation: 0,
                   backgroundColor: Get.isDarkMode ? pinkColor : mainColor
                 ),
-                child: Text(
+                child: const Text(
                   'Go to Home',
                   style: TextStyle(
                     color: Colors.white,

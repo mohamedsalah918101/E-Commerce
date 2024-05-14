@@ -40,13 +40,13 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                 changeColor = !changeColor;
               });
             }),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Obx(() => buildRadioContainer(
             address: controller.address.value,
             name: authController.displayUserName.value,
-            phone: '${controller.phoneNumber.value}',
+            phone: controller.phoneNumber.value,
             title: "Delivery",
             value: 2,
             color: changeColor ? Colors.grey.shade300 : Colors.white,
@@ -54,7 +54,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
               onTap: () {
                 Get.defaultDialog(
                     title: "Enter Your Phone Number",
-                    titleStyle: TextStyle(
+                    titleStyle: const TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
@@ -73,7 +73,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                     },
                     buttonColor: Get.isDarkMode ? pinkColor : mainColor,
                     content: Padding(
-                      padding: EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(15),
                       child: TextField(
                         controller: phoneController,
                         cursorColor: Colors.black,
@@ -95,34 +95,34 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                               onPressed: () {
                                 phoneController.clear();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.close,
                                 color: Colors.black,
                               ),
                             ),
                             hintText: 'Enter Your Phone Number',
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                                 color: Colors.black45,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500),
                             filled: true,
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: const BorderSide(color: Colors.white),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: const BorderSide(color: Colors.white),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             errorBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: const BorderSide(color: Colors.white),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: const BorderSide(color: Colors.white),
                               borderRadius: BorderRadius.circular(10),
                             )),
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                       ),
                     ));
               },
@@ -173,16 +173,16 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
           Radio(
             value: value,
             groupValue: radioContainerIndex,
-            fillColor: MaterialStateColor.resolveWith((states) => Colors.red),
+            fillColor: WidgetStateColor.resolveWith((states) => Colors.red),
             onChanged: (int? value) {
               onChanged(value);
             },
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 10,
             ),
             child: Column(
@@ -194,7 +194,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                   text: title,
                   color: Colors.black,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 TextUtils(
@@ -203,19 +203,19 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                   text: name,
                   color: Colors.black,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
                   children: [
-                    Text("🇪🇬 +20"),
+                    const Text("🇪🇬 +20"),
                     TextUtils(
                       fontSize: 15,
                       fontWeight: FontWeight.normal,
                       text: phone,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 100,
                     ),
                     SizedBox(
@@ -223,7 +223,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 TextUtils(

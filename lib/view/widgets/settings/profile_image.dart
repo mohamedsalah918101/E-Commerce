@@ -19,7 +19,7 @@ class ProfileImage extends StatelessWidget {
               Container(
                 height: 100,
                 width: 100,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                     image: DecorationImage(
@@ -29,7 +29,7 @@ class ProfileImage extends StatelessWidget {
                       fit: BoxFit.contain,
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Column(

@@ -10,7 +10,7 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.onSurface,
       body: Obx((){
         if(controller.favoritesList.isEmpty){
           return Center(
@@ -22,7 +22,7 @@ class FavoritesScreen extends StatelessWidget {
                       width: 100,
                       child: Image.asset('assets/images/heart.png'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text('Please, Add your Favorites Products.',
@@ -46,7 +46,7 @@ class FavoritesScreen extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index){
-                return Divider(
+                return const Divider(
                   color: Colors.grey,
                   thickness: 1,
                 );
@@ -65,7 +65,7 @@ class FavoritesScreen extends StatelessWidget {
     required int productId,
 }) {
     return Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
       child: SizedBox(
         width: double.infinity,
         height: 100,
@@ -87,7 +87,7 @@ class FavoritesScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 15,),
+            const SizedBox(width: 15,),
             Expanded(
               flex: 10,
               child: Column(
@@ -103,7 +103,7 @@ class FavoritesScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   Text(
                     '\$ $price',
                     style: TextStyle(
@@ -116,12 +116,12 @@ class FavoritesScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
                 onPressed: (){
                   controller.manageFavorites(productId);
                 },
-                icon: Icon(Icons.favorite, color: Colors.red, size: 30,)
+                icon: const Icon(Icons.favorite, color: Colors.red, size: 30,)
             ),
           ],
         ),

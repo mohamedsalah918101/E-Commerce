@@ -9,7 +9,7 @@ class AuthTextFormField extends StatelessWidget {
   final Widget prefixIcon;
   final Widget suffixIcon;
   final String hintText;
-  AuthTextFormField(
+  const AuthTextFormField(
       {
         required this.controller,
         required this.obscureText,
@@ -39,19 +39,19 @@ class AuthTextFormField extends StatelessWidget {
         ),
         filled: true,
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10),
         ),
       ),

@@ -15,9 +15,9 @@ class PaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.onSurface,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Payment',
         ),
         elevation: 0,
@@ -26,7 +26,7 @@ class PaymentScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -36,11 +36,11 @@ class PaymentScreen extends StatelessWidget {
                 text: "Shipping to",
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              DeliveryContainerWidget(),
-              SizedBox(
+              const DeliveryContainerWidget(),
+              const SizedBox(
                 height: 20,
               ),
               TextUtils(
@@ -49,11 +49,11 @@ class PaymentScreen extends StatelessWidget {
                 text: "Payment Methods",
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              PaymentMethodWidget(),
-              SizedBox(
+              const PaymentMethodWidget(),
+              const SizedBox(
                 height: 30,
               ),
               Center(
@@ -64,7 +64,7 @@ class PaymentScreen extends StatelessWidget {
                   color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Center(
@@ -79,7 +79,7 @@ class PaymentScreen extends StatelessWidget {
                       elevation: 0,
                     ),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Pay Now",
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     ),

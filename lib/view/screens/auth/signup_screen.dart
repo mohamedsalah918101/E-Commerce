@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: context.theme.backgroundColor,
+          backgroundColor: context.theme.colorScheme.onSurface,
       appBar: AppBar(
         backgroundColor: Get.isDarkMode ? darkGreyColor : Colors.white,
         elevation: 0,
@@ -33,11 +33,11 @@ class SignUpScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height / 1.3,
               child: Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 25,
                   right: 25,
                   top: 40,
@@ -54,7 +54,7 @@ class SignUpScreen extends StatelessWidget {
                             text: "SIGN",
                             color: Get.isDarkMode ? mainColor : pinkColor,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 3,
                           ),
                           TextUtils(
@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       AuthTextFormField(
@@ -82,11 +82,11 @@ class SignUpScreen extends StatelessWidget {
                             return null;
                           }
                         },
-                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/user.png'): Icon(Icons.person, color: pinkColor, size: 30,),
-                        suffixIcon: Text(''),
+                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/user.png'): const Icon(Icons.person, color: pinkColor, size: 30,),
+                        suffixIcon: const Text(''),
                         hintText: 'User Name',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       AuthTextFormField(
@@ -103,11 +103,11 @@ class SignUpScreen extends StatelessWidget {
                             return null;
                           }
                         },
-                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : Icon(Icons.email, color: pinkColor, size: 30,),
-                        suffixIcon: Text(''),
+                        prefixIcon: Get.isDarkMode ? Image.asset('assets/images/email.png') : const Icon(Icons.email, color: pinkColor, size: 30,),
+                        suffixIcon: const Text(''),
                         hintText: 'Email',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GetBuilder<AuthController>(
@@ -126,22 +126,22 @@ class SignUpScreen extends StatelessWidget {
                                 return null;
                               }
                             },
-                            prefixIcon: Get.isDarkMode ? Image.asset('assets/images/lock.png') : Icon(Icons.lock, color: pinkColor, size: 30,),
+                            prefixIcon: Get.isDarkMode ? Image.asset('assets/images/lock.png') : const Icon(Icons.lock, color: pinkColor, size: 30,),
                             suffixIcon: IconButton(
                               onPressed: (){
                                 controller.visibility();
                               },
-                              icon: controller.isVisibility ? Icon(Icons.visibility_off, color: Colors.black,) : Icon(Icons.visibility, color: Colors.black,),
+                              icon: controller.isVisibility ? const Icon(Icons.visibility_off, color: Colors.black,) : const Icon(Icons.visibility, color: Colors.black,),
                             ),
                             hintText: 'Password',
                           );
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       CheckWidget(),
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       GetBuilder<AuthController>(

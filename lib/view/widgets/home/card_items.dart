@@ -30,7 +30,7 @@ class CardItems extends StatelessWidget {
                   itemCount: controller.searchList.isEmpty
                       ? controller.productList.length
                       : controller.searchList.length,
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                     childAspectRatio: 0.8,
                     mainAxisSpacing: 9.0,
                     crossAxisSpacing: 6.0,
@@ -77,7 +77,7 @@ class CardItems extends StatelessWidget {
     required Function() onTab,
   }) {
     return Padding(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       child: InkWell(
         onTap: onTab,
         child: Container(
@@ -102,11 +102,11 @@ class CardItems extends StatelessWidget {
                           controller.manageFavorites(productId);
                         },
                         icon: controller.isFavorites(productId)
-                            ? Icon(
+                            ? const Icon(
                                 Icons.favorite,
                                 color: Colors.red,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.favorite_outline,
                                 color: Colors.black,
                               )),
@@ -114,7 +114,7 @@ class CardItems extends StatelessWidget {
                         onPressed: () {
                           cartController.addProductToCart(productModels);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.shopping_cart,
                           color: Colors.black,
                         )),
@@ -140,7 +140,7 @@ class CardItems extends StatelessWidget {
                   children: [
                     Text(
                       '\$ $price',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
@@ -153,7 +153,7 @@ class CardItems extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(left: 3, right: 2),
+                        padding: const EdgeInsets.only(left: 3, right: 2),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -165,7 +165,7 @@ class CardItems extends StatelessWidget {
                                   text: '$rate',
                                   color: Colors.white),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.star,
                               size: 13,
                               color: Colors.white,

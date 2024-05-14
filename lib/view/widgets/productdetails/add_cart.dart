@@ -15,7 +15,7 @@ class AddCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25),
+      padding: const EdgeInsets.all(25),
       child: Row(
         children: [
           Column(
@@ -37,7 +37,7 @@ class AddCart extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(width: 20,),
+          const SizedBox(width: 20,),
           Expanded(
             child: SizedBox(
               height: 60,
@@ -53,7 +53,7 @@ class AddCart extends StatelessWidget {
                 onPressed: (){
                   controller.addProductToCart(productModels);
                 },
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(

@@ -39,13 +39,13 @@ class CartController extends GetxController {
   void clearAllProducts() {
     Get.defaultDialog(
         title: "Empty Cart",
-        titleStyle: TextStyle(
+        titleStyle: const TextStyle(
             fontSize: 18,
             color: Colors.black,
             fontWeight: FontWeight.bold
         ),
         middleText: 'Are you sure you want to remove all products?',
-        middleTextStyle: TextStyle(
+        middleTextStyle: const TextStyle(
             fontSize: 18,
             color: Colors.black,
             fontWeight: FontWeight.bold

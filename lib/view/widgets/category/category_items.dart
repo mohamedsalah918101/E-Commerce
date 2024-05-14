@@ -20,7 +20,7 @@ class CategoryItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: context.theme.backgroundColor,
+        backgroundColor: context.theme.colorScheme.onSurface,
         appBar: AppBar(
           title: Text(categoryTitle),
           centerTitle: true,
@@ -36,7 +36,7 @@ class CategoryItems extends StatelessWidget {
           } else {
             return GridView.builder(
               itemCount: categoryController.categoryList.length,
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   childAspectRatio: 0.8,
                   mainAxisSpacing: 9,
                   crossAxisSpacing: 6,
@@ -68,7 +68,7 @@ class CategoryItems extends StatelessWidget {
     required Function() onTab,
   }) {
     return Padding(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       child: InkWell(
         onTap: onTab,
         child: Container(
@@ -93,11 +93,11 @@ class CategoryItems extends StatelessWidget {
                           controller.manageFavorites(productId);
                         },
                         icon: controller.isFavorites(productId)
-                            ? Icon(
+                            ? const Icon(
                                 Icons.favorite,
                                 color: Colors.red,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.favorite_outline,
                                 color: Colors.black,
                               )),
@@ -105,7 +105,7 @@ class CategoryItems extends StatelessWidget {
                         onPressed: () {
                           cartController.addProductToCart(productModels);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.shopping_cart,
                           color: Colors.black,
                         )),
@@ -131,7 +131,7 @@ class CategoryItems extends StatelessWidget {
                   children: [
                     Text(
                       '\$ $price',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
@@ -144,7 +144,7 @@ class CategoryItems extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(left: 3, right: 2),
+                        padding: const EdgeInsets.only(left: 3, right: 2),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -156,7 +156,7 @@ class CategoryItems extends StatelessWidget {
                                   text: '$rate',
                                   color: Colors.white),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.star,
                               size: 13,
                               color: Colors.white,

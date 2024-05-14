@@ -15,19 +15,19 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.onSurface,
       body: ListView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         children: [
           ProfileImage(),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Divider(
             color: Get.isDarkMode ? Colors.white : Colors.grey,
             thickness: 2,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           TextUtils(
@@ -36,11 +36,11 @@ class SettingsScreen extends StatelessWidget {
             text: "GENERAL".tr,
             color: Get.isDarkMode ? pinkColor : mainColor,
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           DarkModeWidget(),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           LanguageWidget(),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           LogoutWidget()
         ],
       ),

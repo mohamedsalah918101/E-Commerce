@@ -20,17 +20,17 @@ class LanguageWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(6),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(6),
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: languageSettings,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.language,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   TextUtils(
@@ -44,7 +44,7 @@ class LanguageWidget extends StatelessWidget {
             ),
             Container(
               width: 127,
-              padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(13),
                 border: Border.all(
@@ -57,34 +57,34 @@ class LanguageWidget extends StatelessWidget {
                       color: Get.isDarkMode ? Colors.white : Colors.black),
                   items: [
                     DropdownMenuItem(
+                      value: ene,
                       child: Text(
                         english,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
                       ),
-                      value: ene,
                     ),
                     DropdownMenuItem(
+                      value: ara,
                       child: Text(
                         arabic,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
                       ),
-                      value: ara,
                     ),
                     DropdownMenuItem(
+                      value: frf,
                       child: Text(
                         france,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
                       ),
-                      value: frf,
                     ),
                   ],
                   value: controller.langLocal,

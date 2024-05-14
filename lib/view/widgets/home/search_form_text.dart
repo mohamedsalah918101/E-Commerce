@@ -20,7 +20,7 @@ class SearchFormText extends StatelessWidget {
               decoration: InputDecoration(
                   fillColor: Colors.white,
                   focusColor: Colors.red,
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.search,
                     color: Colors.grey,
                   ),
@@ -29,35 +29,35 @@ class SearchFormText extends StatelessWidget {
                           onPressed: () {
                             controller.clearSearch();
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.close,
                             color: Colors.black,
                           ),
                         )
                       : null,
                   hintText: 'Search with Name & Price',
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                       color: Colors.black45,
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                   filled: true,
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(10),
                   )),
-              style: TextStyle(color: Colors.black),
+              style: const TextStyle(color: Colors.black),
             ));
   }
 }

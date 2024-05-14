@@ -18,12 +18,12 @@ class LogoutWidget extends StatelessWidget {
         onTap: (){
           Get.defaultDialog(
               title: "Logout From the App",
-              titleStyle: TextStyle(
+              titleStyle: const TextStyle(
                   fontSize: 18,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
               middleText: 'Are you sure you need to logout?',
-              middleTextStyle: TextStyle(
+              middleTextStyle: const TextStyle(
                   fontSize: 18,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
@@ -43,21 +43,21 @@ class LogoutWidget extends StatelessWidget {
         },
         splashColor:Get.isDarkMode ? pinkColor.withOpacity(0.4) : mainColor.withOpacity(0.4),
         borderRadius: BorderRadius.circular(12),
-        customBorder: StadiumBorder(),
+        customBorder: const StadiumBorder(),
         child: Row(
           children: [
             Container(
-              padding: EdgeInsets.all(6),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(6),
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: logoutSettings,
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.logout,
                 color: Colors.white,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             TextUtils(

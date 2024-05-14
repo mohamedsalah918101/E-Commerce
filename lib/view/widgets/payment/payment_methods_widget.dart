@@ -1,7 +1,7 @@
 import 'package:e_commerce/utils/theme.dart';
 import 'package:e_commerce/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class PaymentMethodWidget extends StatefulWidget {
   const PaymentMethodWidget({super.key});
@@ -16,7 +16,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: Column(
         children: [
           buildRadioPayment(
@@ -31,7 +31,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
               });
             }
           ),
-          SizedBox(height: 15,),
+          const SizedBox(height: 15,),
           buildRadioPayment(
               name: "Google Pay",
               image: 'assets/images/google.png',
@@ -44,7 +44,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                 });
               }
           ),
-          SizedBox(height: 15,),
+          const SizedBox(height: 15,),
           buildRadioPayment(
               name: "Credit Card",
               image: 'assets/images/credit.png',
@@ -83,7 +83,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                 image,
                 scale: scale,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               TextUtils(
@@ -96,7 +96,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
           Radio(
             value: value,
             groupValue: radioPaymentIndex,
-            fillColor: MaterialStateColor.resolveWith((states) => mainColor),
+            fillColor: WidgetStateColor.resolveWith((states) => mainColor),
             onChanged: (int? value){
               onChange(value);
             },

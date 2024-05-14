@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(child: Obx(() {
       return Scaffold(
-        backgroundColor: context.theme.backgroundColor,
+        backgroundColor: context.theme.colorScheme.onSurface,
         appBar: AppBar(
           leading: Container(),
           elevation: 0,
@@ -30,13 +30,13 @@ class MainScreen extends StatelessWidget {
             Obx((){
               return badges.Badge(
                   position: badges.BadgePosition.topEnd(top: 0, end: 3),
-                  badgeAnimation: badges.BadgeAnimation.slide(
+                  badgeAnimation: const badges.BadgeAnimation.slide(
                     disappearanceFadeAnimationDuration:
                     Duration(milliseconds: 300),
                   ),
                   badgeContent: Text(
                     cartController.quantity().toString(),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                   child: IconButton(
                       onPressed: () {
@@ -106,10 +106,10 @@ class MainScreen extends StatelessWidget {
         body: IndexedStack(
           index: controller.currentIndex.value,
           children: [
-            HomeScreen(),
-            CategoryScreen(),
+            const HomeScreen(),
+            const CategoryScreen(),
             FavoritesScreen(),
-            SettingsScreen()
+            const SettingsScreen()
           ],
         ),
       );

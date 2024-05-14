@@ -8,10 +8,10 @@ class MainController extends GetxController{
   RxInt currentIndex = 0.obs;
 
   final tabs = [
-    HomeScreen(),
-    CategoryScreen(),
+    const HomeScreen(),
+    const CategoryScreen(),
     FavoritesScreen(),
-    SettingsScreen()
+    const SettingsScreen()
   ].obs;
 
   final title = [

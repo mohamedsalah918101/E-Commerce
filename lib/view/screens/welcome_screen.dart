@@ -1,6 +1,5 @@
 import 'package:e_commerce/routes/routes.dart';
 import 'package:e_commerce/utils/theme.dart';
-import 'package:e_commerce/view/screens/auth/login_screen.dart';
 import 'package:e_commerce/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +26,7 @@ class WelcomeScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 Container(
@@ -45,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
@@ -63,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             text: 'Mo',
                             color: mainColor),
-                        SizedBox(
+                        const SizedBox(
                           width: 7,
                         ),
                         TextUtils(
@@ -73,7 +72,7 @@ class WelcomeScreen extends StatelessWidget {
                             color: Colors.white)
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 250,
                 ),
                 ElevatedButton(
@@ -86,7 +85,7 @@ class WelcomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     padding:
-                        EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                        const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                   ),
                   child: TextUtils(
                       fontSize: 22,
@@ -94,7 +93,7 @@ class WelcomeScreen extends StatelessWidget {
                       text: 'Get Start',
                       color: Colors.white),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(

@@ -37,17 +37,17 @@ class DarkModeWidget extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(6),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.all(6),
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: darkSettings,
             ),
-            child: Icon(
+            child: const Icon(
               Icons.dark_mode,
               color: Colors.white,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           TextUtils(

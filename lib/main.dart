@@ -16,7 +16,7 @@ Future<void> main() async {
   await GetStorage.init();
   Platform.isAndroid
       ? await Firebase.initializeApp(
-          options: FirebaseOptions(
+          options: const FirebaseOptions(
           apiKey: "AIzaSyCwOkNZsljjPglBLgVNWdES1quQznZ6F4o",
           appId: "1:1052762332582:android:e2f3e42ce88dfe4c0e8367",
           messagingSenderId: "1052762332582",

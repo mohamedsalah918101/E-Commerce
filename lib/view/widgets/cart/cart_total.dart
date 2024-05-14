@@ -15,8 +15,8 @@ class CartTotal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        margin: EdgeInsets.only(left: 5),
-        padding: EdgeInsets.all(25),
+        margin: const EdgeInsets.only(left: 5),
+        padding: const EdgeInsets.all(25),
         child: Row(
           children: [
             Column(
@@ -39,7 +39,7 @@ class CartTotal extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(width: 20,),
+            const SizedBox(width: 20,),
             Expanded(
               child: SizedBox(
                 height: 60,
@@ -54,7 +54,7 @@ class CartTotal extends StatelessWidget {
                       elevation: 0,
                       backgroundColor: Get.isDarkMode ? pinkColor : mainColor,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(

@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+      backgroundColor: context.theme.colorScheme.onSurface,
       body: Column(
         children: [
           Container(
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
             height: 180,
             decoration: BoxDecoration(
                 color: Get.isDarkMode ? Colors.black : mainColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 )),
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       text: 'Find Your',
                       color: Colors.white),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   TextUtils(
@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       text: 'INSPIRATION',
                       color:Get.isDarkMode ? pinkColor : Colors.white),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   SearchFormText(),
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                   color:Get.isDarkMode ? Colors.white : Colors.black),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           CardItems()
         ],
       ),
