@@ -42,7 +42,7 @@ class ProfileImage extends StatelessWidget {
                     color:Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                   TextUtils(
-                    fontSize: 14,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                     text: authController.displayUserEmail.value,
                     color:Get.isDarkMode ? Colors.white : Colors.black,

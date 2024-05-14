@@ -140,7 +140,7 @@ class CategoryItems extends StatelessWidget {
                       height: 20,
                       width: 45,
                       decoration: BoxDecoration(
-                        color: pinkColor,
+                        color: Get.isDarkMode ? pinkColor : mainColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
