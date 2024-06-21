@@ -14,18 +14,15 @@ const Color logoutSettings = Color(0xff5f95ef);
 const Color notiSettings = Color(0xffdf5862);
 const Color languageSettings = Color(0xffCB256C);
 
-
 class ThemesApp {
   static final light = ThemeData(
-    primaryColor: mainColor,
-    colorScheme: const ColorScheme.light(onSurface: Colors.white),
-    brightness: Brightness.light
-  );
+      primaryColor: mainColor,
+      scaffoldBackgroundColor: Colors.white,
+      brightness: Brightness.light);
 
   static final dark = ThemeData(
-      primaryColor: darkGreyColor,
-      brightness: Brightness.dark,
-      colorScheme: const ColorScheme.dark(onSurface: darkGreyColor)
+    primaryColor: darkGreyColor,
+    scaffoldBackgroundColor: darkGreyColor,
+    brightness: Brightness.dark,
   );
-
 }

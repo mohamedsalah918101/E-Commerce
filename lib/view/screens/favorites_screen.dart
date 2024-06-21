@@ -10,7 +10,7 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.colorScheme.onSurface,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
       body: Obx((){
         if(controller.favoritesList.isEmpty){
           return Center(

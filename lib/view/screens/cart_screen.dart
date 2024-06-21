@@ -16,7 +16,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: context.theme.colorScheme.onSurface,
+          backgroundColor: context.theme.scaffoldBackgroundColor,
           appBar: AppBar(
             title: const Text(
               'Cart Items',

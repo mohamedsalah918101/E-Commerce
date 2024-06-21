@@ -10,7 +10,7 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.colorScheme.onSurface,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
       body: Padding(
         padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
         child: Column(

@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                     color: Colors.black.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: TextUtils(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                       color: Colors.black.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextUtils(
@@ -62,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             text: 'Mo',
                             color: mainColor),
-                        const SizedBox(
+                        SizedBox(
                           width: 7,
                         ),
                         TextUtils(
@@ -87,7 +87,7 @@ class WelcomeScreen extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                   ),
-                  child: TextUtils(
+                  child: const TextUtils(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       text: 'Get Start',
@@ -99,7 +99,7 @@ class WelcomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TextUtils(
+                    const TextUtils(
                         fontSize: 18,
                         fontWeight: FontWeight.normal,
                         text: 'Do not have an Account?',
@@ -108,7 +108,7 @@ class WelcomeScreen extends StatelessWidget {
                       onPressed: () {
                         Get.offNamed(Routes.signUpScreen);
                       },
-                      child: TextUtils(
+                      child: const TextUtils(
                         fontSize: 18,
                         fontWeight: FontWeight.normal,
                         text: 'Sign Up',

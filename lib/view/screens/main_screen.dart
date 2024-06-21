@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(child: Obx(() {
       return Scaffold(
-        backgroundColor: context.theme.colorScheme.onSurface,
+        backgroundColor: context.theme.scaffoldBackgroundColor,
         appBar: AppBar(
           leading: Container(),
           elevation: 0,

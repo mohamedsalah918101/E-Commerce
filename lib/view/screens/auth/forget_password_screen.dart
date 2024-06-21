@@ -16,7 +16,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      backgroundColor: context.theme.colorScheme.onSurface,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,

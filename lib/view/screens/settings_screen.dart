@@ -15,7 +15,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.colorScheme.onSurface,
+      backgroundColor: context.theme.scaffoldBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
